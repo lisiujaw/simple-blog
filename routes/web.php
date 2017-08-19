@@ -11,6 +11,6 @@
 |
 */
 
-$app->get('/', function () use ($app) {
-    return $app->version();
-});
+$app->get('/', 'BlogController@index');
+$app->get('/{page:[0-9]+}', 'BlogController@index');
+$app->get('/post/{alias}', 'BlogController@post');

@@ -7,17 +7,21 @@
     "require": {
         "php": ">=5.6.4",
         "laravel/lumen-framework": "5.4.*",
-        "vlucas/phpdotenv": "~2.2"
+        "vlucas/phpdotenv": "~2.2",
+        "fzaninotto/faker": "^1.7",
+        "rtconner/laravel-kint": "~3.0"
     },
     "require-dev": {
-        "fzaninotto/faker": "~1.4",
         "phpunit/phpunit": "~5.0",
         "mockery/mockery": "~0.9"
     },
     "autoload": {
         "psr-4": {
             "App\\": "app/"
-        }
+        },
+        "files": [
+            "app/Helpers/helpers.php"
+        ]
     },
     "autoload-dev": {
         "classmap": [

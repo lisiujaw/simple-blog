@@ -11,9 +11,16 @@
 |
 */
 
-$factory->define(App\User::class, function (Faker\Generator $faker) {
+$factory->define(App\Models\BlogPost::class, function (Faker\Generator $faker) {
     return [
-        'name' => $faker->name,
-        'email' => $faker->email,
+        'title' => $faker->sentence(6, true),
+        'alias' => $faker->slug,
+        'active' => true,
+    ];
+});
+
+$factory->define(App\Models\BlogPostContent::class, function (Faker\Generator $faker) {
+    return [
+        'content' => $faker->text(1000),
     ];
 });
